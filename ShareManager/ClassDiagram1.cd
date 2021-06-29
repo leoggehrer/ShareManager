@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="ShareManager.Logic.Share">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <NestedTypes>
+      <Delegate Name="ShareManager.Logic.Share.NotificationDelegate" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Logic\Share.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Delegate>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAACACAAAAACAAQAwAAAgAAAEAIAQAAAAAAAI=</HashCode>
+      <FileName>Logic\Share.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShareManager.ConsoleWriter">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConsoleWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShareManager.Logic.Brocker">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAgAAAAEAAJQAQAAAAAAAAEIAAAAAAAA=</HashCode>
+      <FileName>Logic\Brocker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShareManager.Logic.ShareHistory">
+    <Position X="4.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAA=</HashCode>
+      <FileName>Logic\ShareHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ShareManager.Logic.ShareValue">
+    <Position X="7.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAQAAAAAAAAAQAAAAAAAQAAAAgAAAAAAA=</HashCode>
+      <FileName>Logic\ShareValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
