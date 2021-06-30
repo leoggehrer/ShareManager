@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShareManager.Logic
 {
@@ -10,10 +6,14 @@ namespace ShareManager.Logic
 	{
 		public delegate void NotificationDelegate(Object sender, EventArgs args);
 
+		#region Fields
 		private readonly int delay = 500;
 		private volatile bool running = false;
 		private static readonly Random random = new(DateTime.Now.Millisecond);
 		private NotificationDelegate valueChangedHandler;
+		#endregion Fields
+
+		#region Event properties
 		public event NotificationDelegate OnValueChanged
 		{
 			add
@@ -25,12 +25,16 @@ namespace ShareManager.Logic
 				valueChangedHandler -= value;
 			}
 		}
+		#endregion Event properties
 
+		#region Properties
 		public string Name { get; init; }
 		public double StartValue { get; init; }
 		public double CurrentValue { get; private set; }
 		public bool IsRunning => running;
+		#endregion Properties
 
+		#region Methods
 		public Share(string name, double startValue)
 		{
 			Name = name;
@@ -70,5 +74,6 @@ namespace ShareManager.Logic
 				System.Threading.Thread.Sleep(delay);
 			}
 		}
+		#endregion Methods
 	}
 }

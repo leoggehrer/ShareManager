@@ -1,26 +1,23 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ShareManager.Logic
 {
 	public class Brocker
 	{
+		#region Fields
+		private bool hasBuy = false;
+		private double buyValue;
+		#endregion Fields
+
+		#region Properties
 		public string Name { get; init; }
 		public double PurchaseValue { get; init; }
 		public double SaleValue { get; init; }
 		public double GainOrLoss { get; private set; } = 0;
 		public double CurrentGainOrLoss { get; private set; }
-		public Brocker(string name, double purchaseValue, double saleValue)
-		{
-			Name = name;
-			PurchaseValue = purchaseValue > 0 ? purchaseValue : 0;
-			SaleValue = saleValue > 0 ? saleValue : 0;
-		}
-		private bool hasBuy = false;
-		private double buyValue;
+		#endregion Properties
+
+		#region Event handler
 		public void ChangedValueHandler(Object sender, EventArgs args)
 		{
 			if (sender is Share share)
@@ -43,6 +40,15 @@ namespace ShareManager.Logic
 				WriteGainOrLoss(Name, CurrentGainOrLoss);
 			}
 		}
+		#endregion Event handler
+
+		#region Methods
+		public Brocker(string name, double purchaseValue, double saleValue)
+		{
+			Name = name;
+			PurchaseValue = purchaseValue > 0 ? purchaseValue : 0;
+			SaleValue = saleValue > 0 ? saleValue : 0;
+		}
 		private static void WriteGainOrLoss(string name, double gainOrLoss)
 		{
 			ConsoleColor saveColor = Console.ForegroundColor;
@@ -59,5 +65,6 @@ namespace ShareManager.Logic
 			}
 			Console.ForegroundColor = saveColor;
 		}
+		#endregion Methods
 	}
 }
