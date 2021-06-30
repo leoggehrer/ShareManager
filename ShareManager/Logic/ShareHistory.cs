@@ -16,7 +16,7 @@ namespace ShareManager.Logic
 			{
 				if (File.Exists(FilePath) == false)
 				{
-					File.WriteAllText(FilePath, CreateShareValue(share).ToCsv());
+					File.WriteAllText(FilePath, CreateShareValue(share).ToCsv() + Environment.NewLine);
 				}
 				else
 				{
